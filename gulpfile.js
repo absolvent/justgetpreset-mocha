@@ -14,7 +14,7 @@ const eslintRunFiles = require('gore-eslint/runFiles');
 const runFiles = require('./runFiles');
 
 gulp.task('lint', function gulpLintTask() {
-  return eslintRunFiles('./*.js');
+  return eslintRunFiles('{./__meta_test__/,./__tests__/,./}*.js');
 });
 
 gulp.task('test', ['lint'], function gulpTestTask() {

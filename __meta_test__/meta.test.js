@@ -8,6 +8,9 @@
 
 'use strict';
 
+/* eslint func-names: 0 */
+/* global describe: false, it: false */
+
 describe('mocha', function () {
   it('should run this meta test', function () {
   });

@@ -8,7 +8,10 @@
 
 'use strict';
 
-var runFiles = require('../runFiles');
+/* eslint func-names: 0 */
+/* global describe: false, it: false */
+
+const runFiles = require('../runFiles');
 
 describe('mocha', function () {
   it('should run test files', function () {
