@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "bluebird": "^3.1.1",
-    "glob": "^6.0.3",
     "gore-eslint": "^1.0.0",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "ultra-glob": "^1.0.1"
   },
   "devDependencies": {
     "gulp": "^3.9.0"
@@ -26,5 +26,5 @@
   "scripts": {
     "test": "gulp test"
   },
-  "version": "1.0.0"
+  "version": "1.1.0"
 }

@@ -10,7 +10,7 @@
 
 const Promise = require('bluebird');
 const Mocha = require('mocha');
-const glob = require('glob');
+const glob = require('ultra-glob');
 
 function noop() {
 }
@@ -33,11 +33,7 @@ function onFileListReady(fileList, isSilent) {
 }
 
 function runFiles(filesGlobPattern, isSilent) {
-  return Promise.fromCallback(function globPromiseCallback(callback) {
-    glob(filesGlobPattern, callback);
-  }).then(function fileListPromiseHandle(fileList) {
-    return onFileListReady(fileList, isSilent);
-  });
+  return glob(filesGlobPattern).then(fileList => onFileListReady(fileList, isSilent));
 }
 
 module.exports = runFiles;
