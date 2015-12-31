@@ -8,34 +8,34 @@
 
 'use strict';
 
-var Promise = require('bluebird');
-var Mocha = require('mocha');
-var glob = require('glob');
+const Promise = require('bluebird');
+const Mocha = require('mocha');
+const glob = require('glob');
 
 function noop() {
 }
 
 function onFileListReady(fileList, isSilent) {
-  var mocha = new Mocha({
+  const mocha = new Mocha({
     bail: true,
     reporter: isSilent ? (
       noop
     ) : (
       'list'
-    )
+    ),
   });
 
   fileList.forEach(mocha.addFile, mocha);
 
-  return Promise.fromCallback(function (callback) {
+  return Promise.fromCallback(function mochaPromiseCallback(callback) {
     mocha.run(callback);
   });
 }
 
 function runFiles(filesGlobPattern, isSilent) {
-  return Promise.fromCallback(function (callback) {
+  return Promise.fromCallback(function globPromiseCallback(callback) {
     glob(filesGlobPattern, callback);
-  }).then(function (fileList) {
+  }).then(function fileListPromiseHandle(fileList) {
     return onFileListReady(fileList, isSilent);
   });
 }

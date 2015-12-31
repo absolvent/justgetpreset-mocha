@@ -8,10 +8,15 @@
 
 'use strict';
 
-var gulp = require('gulp');
-var path = require('path');
-var runFiles = require('./runFiles');
+const gulp = require('gulp');
+const path = require('path');
+const eslintRunFiles = require('gore-eslint/runFiles');
+const runFiles = require('./runFiles');
 
-gulp.task('test', function () {
+gulp.task('lint', function gulpLintTask() {
+  return eslintRunFiles('./*.js');
+});
+
+gulp.task('test', ['lint'], function gulpTestTask() {
   return runFiles(path.resolve(__dirname, '__tests__', '**', '*.test.js'));
 });
