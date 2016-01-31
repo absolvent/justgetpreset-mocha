@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015-present, goreutils
+ * Copyright (c) 2015-present, spacekick
  * All rights reserved.
  *
  * This source code is licensed under the MIT-style license found in the
@@ -11,7 +11,6 @@
 /* eslint func-names: 0 */
 /* global describe: false, it: false */
 
-describe('mocha', function () {
-  it('should run this meta test', function () {
-  });
+describe('mocha', () => {
+  it('should run this meta test', () => ({}));
 });

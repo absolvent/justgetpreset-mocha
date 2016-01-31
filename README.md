@@ -1,4 +1,4 @@
-# gore-mocha
+# space-preconfigured-mocha
 
 Wrapper around mocha for ease of use and zero configuration.
 
@@ -8,7 +8,7 @@ You can easily attach mocha to your gulpfile.
 
 ```JavaScript
 const gulp = require('gulp');
-const mocha = require('gore-mocha');
+const mocha = require('space-preconfigured-mocha');
 
 gulp.task('test', function gulpTestTask() {
   return mocha([

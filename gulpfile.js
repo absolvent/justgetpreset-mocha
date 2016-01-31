@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015-present, goreutils
+ * Copyright (c) 2015-present, spacekick
  * All rights reserved.
  *
  * This source code is licensed under the MIT-style license found in the
@@ -10,13 +10,13 @@
 
 const gulp = require('gulp');
 const path = require('path');
-const eslint = require('gore-eslint');
-const runFiles = require('./runFiles');
+const eslint = require('space-preconfigured-eslint');
+const mocha = require('./index');
 
 gulp.task('lint', function gulpLintTask() {
   return eslint('{./__meta_test__/,./__tests__/,./}*.js');
 });
 
 gulp.task('test', ['lint'], function gulpTestTask() {
-  return runFiles(path.resolve(__dirname, '__tests__', '**', '*.test.js'));
+  return mocha(path.resolve(__dirname, '__tests__', '**', '*.test.js'));
 });
