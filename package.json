@@ -2,7 +2,7 @@
   "dependencies": {
     "bluebird": "^3.1.5",
     "mocha": "^2.4.5",
-    "space-preconfigured-eslint": "^1.4.6",
+    "lookly-preset-eslint": "^1.4.6",
     "ultra-glob": "^1.1.1"
   },
   "devDependencies": {
@@ -18,10 +18,10 @@
     "mocha"
   ],
   "main": "index",
-  "name": "space-preconfigured-mocha",
+  "name": "lookly-preset-mocha",
   "repository": {
     "type": "git",
-    "url": "git@github.com:spacekick/space-preconfigured-mocha.git"
+    "url": "git@github.com:lookly/lookly-preset-mocha.git"
   },
   "scripts": {
     "test": "gulp test"

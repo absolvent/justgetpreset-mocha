@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015-present, spacekick
+ * Copyright (c) 2015-present, lookly
  * All rights reserved.
  *
  * This source code is licensed under the MIT-style license found in the
@@ -10,7 +10,7 @@
 
 const gulp = require('gulp');
 const path = require('path');
-const eslint = require('space-preconfigured-eslint');
+const eslint = require('lookly-preset-eslint');
 const mocha = require('./index');
 
 gulp.task('lint', function gulpLintTask() {
