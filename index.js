@@ -15,10 +15,10 @@ const glob = require('ultra-glob');
 function noop() {
 }
 
-function onFileListReady(fileList, isSilent) {
+function onFileListReady(fileList, config) {
   const mocha = new Mocha({
     bail: true,
-    reporter: isSilent ? (
+    reporter: config.silent ? (
       noop
     ) : (
       'list'
@@ -32,8 +32,8 @@ function onFileListReady(fileList, isSilent) {
   });
 }
 
-function runFiles(filesGlobPattern, isSilent) {
-  return glob(filesGlobPattern).then(fileList => onFileListReady(fileList, isSilent));
+function runFiles(filesGlobPattern, config) {
+  return glob(filesGlobPattern).then(fileList => onFileListReady(fileList, config));
 }
 
 module.exports = runFiles;

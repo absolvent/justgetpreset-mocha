@@ -2,13 +2,14 @@
   "dependencies": {
     "bluebird": "^3.1.5",
     "mocha": "^2.4.5",
-    "lookly-preset-eslint": "^1.4.6",
     "ultra-glob": "^1.1.1"
   },
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "lookly-preset-ava": "^1.0.0",
+    "lookly-preset-eslint": "^1.4.6"
   },
-  "description": "Wrapper around mocha for ease of use and zero configuration.",
+  "description": "We do the same thing to mocha as Shelby did to Mustang in the '60s.",
   "engines": {
     "node": ">=4.0"
   },
@@ -26,5 +27,5 @@
   "scripts": {
     "test": "gulp test"
   },
-  "version": "1.1.2"
+  "version": "1.1.3"
 }

@@ -8,15 +8,15 @@
 
 'use strict';
 
+const ava = require('lookly-preset-ava');
+const eslint = require('lookly-preset-eslint');
 const gulp = require('gulp');
 const path = require('path');
-const eslint = require('lookly-preset-eslint');
-const mocha = require('./index');
 
 gulp.task('lint', function gulpLintTask() {
   return eslint('{./__meta_test__/,./__tests__/,./}*.js');
 });
 
 gulp.task('test', ['lint'], function gulpTestTask() {
-  return mocha(path.resolve(__dirname, '__tests__', '**', '*.test.js'));
+  return ava(path.resolve(__dirname, '__tests__', '**', '*.test.js'));
 });

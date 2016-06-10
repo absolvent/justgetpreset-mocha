@@ -8,13 +8,11 @@
 
 'use strict';
 
-/* eslint func-names: 0 */
-/* global describe: false, it: false */
-
 const mocha = require('../index');
+const test = require('lookly-preset-ava/test');
 
-describe('mocha', function () {
-  it('should run test files', function () {
-    return mocha('../__meta_test__/*.test.js', true);
+test('should run test files', function () {
+  return mocha('../__meta_test__/*.test.js', {
+    silent: true,
   });
 });
